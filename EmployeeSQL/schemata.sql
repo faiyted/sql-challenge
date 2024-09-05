@@ -1,5 +1,9 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+DROP TABLE if exists departments;
+DROP TABLE if exists dept_emp;
+DROP TABLE if exists dept_manager;
+DROP TABLE if exists employees;
+DROP TABLE if exists salaries;
+DROP TABLE if exists titles;
 
 
 CREATE TABLE "departments" (
@@ -72,3 +76,11 @@ REFERENCES "titles" ("title_id");
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
+
+--Query all table
+SELECT * FROM departments;
+SELECT * FROM dept_emp;
+SELECT * FROM dept_manager;
+SELECT * FROM employees;
+SELECT * FROM salaries;
+SELECT * FROM titles;
